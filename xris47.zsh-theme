@@ -2,8 +2,8 @@ local user="%{$reset_color%}%n@%m%{$reset_color%}"
 local pwd="%{$fg[cyan]%}%~%{$reset_color%}"
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$reset_color%}"
 local time="%{$fg[green]%}[%@]%{$reset_color%}"
-PROMPT='${user} ${pwd} ${ret_status}'
-RPROMPT='$(git_prompt_info)%{$reset_color%}$(git_prompt_status) ${time}'
+PROMPT='${user} ${pwd} ${ret_status} '
+RPROMPT='$(git_prompt_info)$(branch_prompt_info)%{$reset_color%}$(git_prompt_status) ${time}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
