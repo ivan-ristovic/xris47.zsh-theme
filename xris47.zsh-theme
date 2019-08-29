@@ -1,5 +1,6 @@
 local user="%{$reset_color%}%n@%m%{$reset_color%}"
 local pwd="%{$fg[cyan]%}%~%{$reset_color%}"
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$reset_color%}"
 RPROMPT='$(git_prompt_info)$(branch_prompt_info)%{$reset_color%}$(git_prompt_status)'
 PROMPT='${user} ${pwd} ${ret_status}'
 RPROMPT='$(git_prompt_info)'
